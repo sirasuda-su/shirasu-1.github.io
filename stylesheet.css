@@ -1,0 +1,194 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: rgba(0, 85, 255, 0.599);
+  /*gpt曰く↓*/
+  position: fixed; /* 固定表示 */
+  width: 100%;
+  top: 0; /* 初期状態で上部 */
+  transition: top 0.5s ease; /* スムーズなアニメーション */
+  z-index: 100; /* 他の要素よりも前面に表示 */
+
+}
+
+.logo {
+  color: rgb(255, 246, 246);
+  font-size: 22px;
+}
+
+.nav-links {
+  display: flex;
+  /* background-color: red; */
+  justify-content: space-around;
+  width: 38%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: 0.5s ease;
+}
+
+.nav-active {
+  transform: translateX(0%) !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* body {
+    display: none;
+  } */
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    /* display: flex; */
+    position: absolute;
+    right: 0;
+    height: 92vh;
+    top: 8vh;
+    background-color: #465bff;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+@keyframes navLinksFade {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+/*バーガメニューのアニメーション*/
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(405deg) translate(-5px, -6px);
+}
+
+/* 背景画像を設定 */
+body {
+  background-image: url('picture/picture_4.png'); /* 背景画像のURLを指定 */
+  background-size: cover; /* 画像を要素全体に拡大または縮小して表示 */
+  background-attachment: fixed;
+  background-position: center; /* 画像を中央に配置 */
+  background-repeat: no-repeat; /* 画像を繰り返さない */
+  height: 100vh; /* ビューポート全体の高さを設定 */
+  margin: 0;
+  padding: 0;
+}
+
+/* コンテンツのスタイル */
+.content {
+  text-align: center;
+  color: rgb(217, 217, 217);
+  padding-top: 20vh;
+}
+
+/* サイト全体の背景色を設定 */
+body {
+  background-color: #c7c7c7; /* 背景色をライトグレーに設定 */
+  margin: 0;
+  padding: 0;
+}
+
+/* コンテンツのスタイル */
+.content {
+
+}
+
+@font-face {
+  font-family: 'nicomoji'; /* フォントの名前を指定 */
+  src: url('nicomoji-plus_v2.ttf') format('truetype'); /* フォールバック用 */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'tegaki'; /* フォントの名前を指定 */
+  src: url('GRS_tegaki_baont_trial.ttf') format('truetype'); /* フォールバック用 */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* フォントを使用する */
+ body {
+  font-family:'tegaki','nicomoji', sans-serif; /*デフォルトフォントとして設定*/
+}
+
+.box1 {
+  background-image: url('picture/picture_2.png');
+}
+
+h1 {
+  font-size: 48px; /* 文字サイズを48pxに設定 */
+  color: #ffffff;     /* 文字色を変更（オプション） */
+  text-align: center; /* テキストを中央揃え（オプション） */
+  font-family: 'nicomoji', serif; /*見出しにフォントを適用 */
+  height: 60px;
+  line-height:60px;
+} 
+
+ol {
+  list-style-type: none;
+}
+
+h2 {
+  font-size: 35px; /* 文字サイズを48pxに設定 */
+  color: #ffffff;     /* 文字色を変更（オプション） */
+  text-align: center; /* テキストを中央揃え（オプション） */
+  font-family: 'tegaki', serif; /*見出しにフォントを適用 */
+  height: 60px;
+  line-height:60px;
+} 
