@@ -119,7 +119,7 @@ nav {
 
 /* 背景画像を設定 */
 body {
-  background-image: url('picture/picture_4.png'); /* 背景画像のURLを指定 */
+  background-image: url('https://github.com/sirasuda-su/shirasu-1.github.io/blob/main/picture_4.png?raw=true'); /* 背景画像のURLを指定 */
   background-size: cover; /* 画像を要素全体に拡大または縮小して表示 */
   background-attachment: fixed;
   background-position: center; /* 画像を中央に配置 */
